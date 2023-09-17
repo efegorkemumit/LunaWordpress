@@ -1,6 +1,6 @@
 <?php get_header();?>
 
-<p>Hello World</p>
+<p class="myclass">Hello World</p>
 
 
 <?php get_footer();?>
