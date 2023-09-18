@@ -13,18 +13,26 @@
         <div  class="container mx-auto flex justify-between items-center">
             <img class="w-30 h-11" src="<?php echo get_template_directory_uri() ?>/assets/img/logo.png"/>
 
-            <ul class="hidden md:flex space-x-6">
-                <li><a class="text-lg text-gray-700 hover:text-gray-950 hover:underline" href="#">Home</a></li>
-                <li><a class="text-lg text-gray-700 hover:text-gray-950 hover:underline" href="#">News</a></li>
-                <li><a class="text-lg text-gray-700 hover:text-gray-950 hover:underline" href="#">Services</a></li>
-                <li><a class="text-lg text-gray-700 hover:text-gray-950 hover:underline" href="#">About</a></li>
-                <li><a class="text-lg text-gray-700 hover:text-gray-950 hover:underline" href="#">Contact</a></li>
-            </ul>
+         
 
             <?php
+
+            class My_custom_Walker extends Walker_Nav_Menu{
+
+                public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+
+                    $output .= '<li><a class="text-lg text-gray-700 hover:text-gray-950 hover:underline"
+                     href="'.esc_url($item->url).'">'.esc_html($item->title).'</a></li>';
+
+                }
+            }
+
+
             wp_nav_menu( array(
                 'theme_location' => 'primary_menu',
-                'items_wrap' => '<ul class="hidden md:flex space-x-6">%3$s</ul>'
+                'items_wrap' => '<ul class="hidden md:flex space-x-6">%3$s</ul>',
+                'depth'=>1,
+                'walker' => new My_custom_Walker(),
 
 
             ) );
@@ -63,6 +71,8 @@
                     <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4" ><a class="block pl-7" href="#">Contact</a></li>
 
                 </ul>
+
+                
             </div>
         </div>
 
