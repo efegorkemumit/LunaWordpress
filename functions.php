@@ -1,5 +1,15 @@
 <?php
 
+function luna_setup(){
+
+    register_nav_menus(array(
+        'primary_menu' => __( 'Primary Menu', 'luna' ),
+    ) );
+}
+
+
+add_action( 'after_setup_theme', 'luna_setup' );
+
 
 function luna_assets(){
 

@@ -21,6 +21,15 @@
                 <li><a class="text-lg text-gray-700 hover:text-gray-950 hover:underline" href="#">Contact</a></li>
             </ul>
 
+            <?php
+            wp_nav_menu( array(
+                'theme_location' => 'primary_menu',
+                'items_wrap' => '<ul class="hidden md:flex space-x-6">%3$s</ul>'
+
+
+            ) );
+            ?>
+
             <div class="md:flex space-x-6">
                 <a  class="text-gray-700 hover:text-gray-950" href="">
                 <i class="fa-brands fa-facebook"></i>
