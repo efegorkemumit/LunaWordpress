@@ -4,7 +4,7 @@
 function luna_assets(){
 
 
-    wp_enqueue_style( 'input', get_template_directory_uri() . '/assets/css/input.css', false, '1.1', 'all');
+    wp_enqueue_style( 'input', get_template_directory_uri() . '/assets/css/output.css', false, '1.1', 'all');
 
 
 }
