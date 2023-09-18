@@ -8,10 +8,10 @@
 </head>
 <body <?php body_class();?>>
 
-<header class="h-20 bg-white">
+<header class="h-20 bg-white shadow-lg">
     <nav class="relative px-2 py-4">
         <div  class="container mx-auto flex justify-between items-center">
-            Logo
+            <img class="w-30 h-11" src="<?php echo get_template_directory_uri() ?>/assets/img/logo.png"/>
 
             <ul class="md:flex space-x-6">
                 <li><a class="text-lg text-gray-700 hover:text-gray-950 hover:underline" href="#">Home</a></li>
