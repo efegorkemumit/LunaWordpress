@@ -62,15 +62,29 @@
 
         <div class="md:hidden flex justify-center mt-3 w-full">
             <div id="mobile-menu" class="mobile-menu absolute top-23 w-full">
-                <ul class="bg-gray-100 shadow-lg font-bold h-screen">
-                    <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4" ><a class="block pl-7" href="#">Home</a></li>
+              
+                <?php
 
-                    <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4" ><a class="block pl-7" href="#">News</a></li>
-                    <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4" ><a class="block pl-7" href="#">Services</a></li>
-                    <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4" ><a class="block pl-7" href="#">About</a></li>
-                    <li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4" ><a class="block pl-7" href="#">Contact</a></li>
+class My_custom_Walker2 extends Walker_Nav_Menu{
 
-                </ul>
+    public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+
+        $output .= '<li class="border-b-2 border-white hover:bg-red-400 hover:text-white pl-4"><a class="block pl-7"
+         href="'.esc_url($item->url).'">'.esc_html($item->title).'</a></li>';
+
+    }
+}
+
+
+wp_nav_menu( array(
+    'theme_location' => 'primary_menu',
+    'items_wrap' => '<ul class="bg-gray-100 shadow-lg font-bold h-screen">%3$s</ul>',
+    'depth'=>1,
+    'walker' => new My_custom_Walker2(),
+
+
+) );
+?>
 
                 
             </div>
