@@ -62,6 +62,39 @@ function themename_customize_register($wp_customize){
         'section'    => 'communication',
         'type'   => 'text',
     ));
+
+    $wp_customize->add_setting('address', array(
+        'default'        => '',
+
+    ));
+
+    $wp_customize->add_control('address', array(
+        'label'      => __('address', 'luna'),
+        'section'    => 'communication',
+        'type'   => 'text',
+    ));
+
+    $wp_customize->add_setting('phone', array(
+        'default'        => '',
+
+    ));
+
+    $wp_customize->add_control('phone', array(
+        'label'      => __('phone', 'luna'),
+        'section'    => 'communication',
+        'type'   => 'text',
+    ));
+
+    $wp_customize->add_setting('email', array(
+        'default'        => '',
+
+    ));
+
+    $wp_customize->add_control('email', array(
+        'label'      => __('email', 'luna'),
+        'section'    => 'communication',
+        'type'   => 'text',
+    ));
 }
 add_action('customize_register', 'themename_customize_register');
 

@@ -25,9 +25,9 @@
         </div>
         <div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">
           <h3 class="text-2xl font-semibold mb-4">ADDRESS</h3>
-         <p class="text-gray-400">Address : ....................... </p>
-         <p class="text-gray-400">Phone : ....................... </p>
-         <p class="text-gray-400">Email : ....................... </p>
+         <p class="text-gray-400">Address : <?php echo get_theme_mod('address'); ?> </p>
+         <p class="text-gray-400">Phone : <?php echo get_theme_mod('phone'); ?> </p>
+         <p class="text-gray-400">Email : <?php echo get_theme_mod('email'); ?> </p>
          <div class="md:flex space-x-6 mt-3">
                 <a target="_blank" href="<?php echo get_theme_mod('facebook_link'); ?>" class="text-white hover:text-gray-300" href="">
                 <i class="fa-brands fa-facebook"></i>
