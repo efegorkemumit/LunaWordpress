@@ -74,6 +74,18 @@ function themename_customize_register($wp_customize){
         'type'   => 'text',
     ));
 
+    $wp_customize->add_setting('copyright', array(
+        'default'        => '',
+
+    ));
+
+    $wp_customize->add_control('copyright', array(
+        'label'      => __('copyright', 'luna'),
+        'section'    => 'communication',
+        'type'   => 'text',
+    ));
+
+
     $wp_customize->add_setting('phone', array(
         'default'        => '',
 

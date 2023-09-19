@@ -3,7 +3,7 @@
     <div class="container mx-auto flex flex-wrap justify-between">
         <div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">
             <img class="w-30 h-11" src="<?php echo get_template_directory_uri() ?>/assets/img/logo.png"/>
-            <p class="text-gray-400 mt-4">Copyright</p>
+            <p class="text-gray-400 mt-4 text-xs"><?php echo get_theme_mod('copyright'); ?></p>
         </div>
         <div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">
           <h3 class="text-2xl font-semibold mb-4">LINKS</h3>
