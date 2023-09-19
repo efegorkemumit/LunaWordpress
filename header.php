@@ -39,13 +39,13 @@
             ?>
 
             <div class="md:flex space-x-6">
-                <a  class="text-gray-700 hover:text-gray-950" href="">
+                <a target="_blank" href="<?php echo get_theme_mod('facebook_link'); ?>" class="text-gray-700 hover:text-gray-950" href="">
                 <i class="fa-brands fa-facebook"></i>
                 </a>
-                <a class="text-gray-700 hover:text-gray-950 href="">
+                <a target="_blank" href="<?php echo get_theme_mod('twitter_link'); ?>" class="text-gray-700 hover:text-gray-950 href="">
                 <i class="fa-brands fa-twitter"></i>
                 </a>
-                <a class="text-gray-700 hover:text-gray-950 href="">
+                <a target="_blank" href="<?php echo get_theme_mod('instagram_link'); ?>" class="text-gray-700 hover:text-gray-950 href="">
                 <i class="fa-brands fa-instagram"></i>
                 </a>
             

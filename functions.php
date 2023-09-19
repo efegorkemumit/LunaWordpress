@@ -19,3 +19,49 @@ function luna_assets(){
 
 }
 add_action( 'wp_enqueue_scripts', 'luna_assets' );
+
+function themename_customize_register($wp_customize){
+
+    $wp_customize->add_section('communication', array(
+        'title'    => __('Communication', 'luna'),
+        'description' => '',
+        'priority' => 120,
+    ));
+    $wp_customize->add_setting('facebook_link', array(
+        'default'        => '',
+        'sanitize_callback'     => 'esc_url_raw',
+
+    ));
+
+    $wp_customize->add_control('facebook_link', array(
+        'label'      => __('Facebook', 'luna'),
+        'section'    => 'communication',
+        'type'   => 'text',
+    ));
+
+    $wp_customize->add_setting('twitter_link', array(
+        'default'        => '',
+        'sanitize_callback'     => 'esc_url_raw',
+
+    ));
+
+    $wp_customize->add_control('twitter_link', array(
+        'label'      => __('Twitter', 'luna'),
+        'section'    => 'communication',
+        'type'   => 'text',
+    ));
+
+    $wp_customize->add_setting('instagram_link', array(
+        'default'        => '',
+        'sanitize_callback'     => 'esc_url_raw',
+
+    ));
+
+    $wp_customize->add_control('instagram_link', array(
+        'label'      => __('Instagram', 'luna'),
+        'section'    => 'communication',
+        'type'   => 'text',
+    ));
+}
+add_action('customize_register', 'themename_customize_register');
+
