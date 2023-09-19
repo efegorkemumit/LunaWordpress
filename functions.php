@@ -98,3 +98,24 @@ function themename_customize_register($wp_customize){
 }
 add_action('customize_register', 'themename_customize_register');
 
+function luna_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Footer 1 Widgets', 'luna' ),
+		'id'            => 'footer-1',
+		'description'   => __( 'Widgets in this area will be shown under your single posts, before comments.', 'luna' ),
+		'before_widget'	=> '<div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">',
+		'after_widget'	=> '</div>',
+		'before_title'	=> '',
+		'after_title'	=> '',
+    ) );
+    register_sidebar( array(
+		'name'          => __( 'Footer 2 Widgets', 'luna' ),
+		'id'            => 'footer-2',
+		'description'   => __( 'Widgets in this area will be shown under your single posts, before comments.', 'luna' ),
+		'before_widget'	=> '<div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">',
+		'after_widget'	=> '</div>',
+		'before_title'	=> '',
+		'after_title'	=> '',
+    ) );
+}
+add_action( 'widgets_init', 'luna_widgets_init' );
