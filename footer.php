@@ -2,7 +2,25 @@
 <footer class="bg-slate-900 py-7 text-white shadow-2xl shadow-white">
     <div class="container mx-auto flex flex-wrap justify-between">
         <div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">
-            <img class="w-30 h-11" src="<?php echo get_template_directory_uri() ?>/assets/img/logo.png"/>
+
+        <?php 
+            $custom_logo_url = get_theme_mod('footer_custom_logo');
+            if($custom_logo_url)
+            {
+                echo '<img class="w-30 h-11" src="'.esc_url($custom_logo_url).'" />';
+
+            }
+            else
+            {
+                echo '<img class="w-30 h-11" src="'.get_template_directory_uri(). '/assets/img/logo.png'.'" />';
+            }
+
+
+
+            ?>
+
+
+
             <p class="text-gray-400 mt-4 text-xs"><?php echo get_theme_mod('copyright'); ?></p>
         </div>
         <div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">

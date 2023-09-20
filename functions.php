@@ -20,7 +20,7 @@ function luna_assets(){
 }
 add_action( 'wp_enqueue_scripts', 'luna_assets' );
 
-function themename_customize_register($wp_customize){
+function luna_customize_register($wp_customize){
 
     $wp_customize->add_section('communication', array(
         'title'    => __('Communication', 'luna'),
@@ -107,8 +107,50 @@ function themename_customize_register($wp_customize){
         'section'    => 'communication',
         'type'   => 'text',
     ));
+
+
+    //////////////// LOGO SETTINGS
+
+    $wp_customize->add_section('custom_logo_section', array(
+        'title'    => __('Logo Settings', 'luna'),
+        'description' => '',
+        'priority' => 30,
+    ));
+
+    $wp_customize->add_setting('custom_logo', array(
+        'default'        => '',
+        'sanitize_callback'     => 'esc_url_raw',
+
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'custom_logo', array(
+        'label'    => __('Image Upload Test', 'luna'),
+        'section'  => 'custom_logo_section',
+        'settings' => 'custom_logo',
+    )));
+
+    //////////////// FOOTER LOGO SETTINGS
+
+    $wp_customize->add_section('custom_footer_logo_section', array(
+        'title'    => __('Footer Logo Settings', 'luna'),
+        'description' => '',
+        'priority' => 30,
+    ));
+
+    $wp_customize->add_setting('footer_custom_logo', array(
+        'default'        => '',
+        'sanitize_callback'     => 'esc_url_raw',
+
+    ));
+    $wp_customize->add_control( new WP_Customize_Image_Control($wp_customize, 'footer_custom_logo', array(
+        'label'    => __('Image Upload Test', 'luna'),
+        'section'  => 'custom_footer_logo_section',
+        'settings' => 'footer_custom_logo',
+    )));
+
+
+
 }
-add_action('customize_register', 'themename_customize_register');
+add_action('customize_register', 'luna_customize_register');
 
 function luna_widgets_init() {
 	register_sidebar( array(

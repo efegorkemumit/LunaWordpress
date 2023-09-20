@@ -11,7 +11,21 @@
 <header class="h-20 bg-white shadow-lg">
     <nav class="relative px-2 py-4">
         <div  class="container mx-auto flex justify-between items-center">
-            <img class="w-30 h-11" src="<?php echo get_template_directory_uri() ?>/assets/img/logo.png"/>
+            <?php 
+            $custom_logo_url = get_theme_mod('custom_logo');
+            if($custom_logo_url)
+            {
+                echo '<img class="w-30 h-11" src="'.esc_url($custom_logo_url).'" />';
+
+            }
+            else
+            {
+                echo '<img class="w-30 h-11" src="'.get_template_directory_uri(). '/assets/img/logo.png'.'" />';
+            }
+
+
+
+            ?>
 
          
 
