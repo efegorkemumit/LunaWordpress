@@ -2,7 +2,7 @@
 <footer class="bg-slate-900 py-7 text-white shadow-2xl shadow-white">
     <div class="container mx-auto flex flex-wrap justify-between">
         <div class="w-full md:w-1/2 lg:w-1/4 mb-4 md:mb-0">
-
+        <a href="<?php echo site_url();?>">
         <?php 
             $custom_logo_url = get_theme_mod('footer_custom_logo');
             if($custom_logo_url)
@@ -18,7 +18,7 @@
 
 
             ?>
-
+</a>
 
 
             <p class="text-gray-400 mt-4 text-xs"><?php echo get_theme_mod('copyright'); ?></p>

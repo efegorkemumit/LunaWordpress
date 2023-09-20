@@ -11,6 +11,8 @@
 <header class="h-20 bg-white shadow-lg">
     <nav class="relative px-2 py-4">
         <div  class="container mx-auto flex justify-between items-center">
+<a href="<?php echo site_url();?>">
+
             <?php 
             $custom_logo_url = get_theme_mod('custom_logo');
             if($custom_logo_url)
@@ -27,7 +29,7 @@
 
             ?>
 
-         
+</a>
 
             <?php
 
