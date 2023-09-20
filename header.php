@@ -149,4 +149,3 @@ wp_nav_menu( array(
 
 </script>
 
-<p>Header</p>
