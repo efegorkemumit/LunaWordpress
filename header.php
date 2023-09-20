@@ -6,7 +6,7 @@
     <title>Document</title>
     <?php wp_head();?>
 </head>
-<body <?php body_class();?>>
+<body class="leading-normal tracking-normal text-white gradient"  <?php body_class();?>>
 
 <header class="h-20 bg-white shadow-lg">
     <nav class="relative px-2 py-4">
@@ -113,6 +113,10 @@ wp_nav_menu( array(
 </header>
 
 <style>
+    .gradient
+    {
+        background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    }
     .mobile-menu{
         left:-200%;
         transition:0.5s;
