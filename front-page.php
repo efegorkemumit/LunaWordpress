@@ -43,4 +43,50 @@
         </g>
       </svg>
     </div>
+
+  <section>
+    <div class ="bg-white border-b py-8">
+      <div class="container max-w-5xl mx-auto m-8">
+        <h1 class="w-full my-2 text-5xl font-semibold text-center text-gray-800">Title</h1>
+        <div class="w-full mb-4">
+          <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-2xl"> </div>
+        </div>
+      
+        <div class="flex flex-wrap">
+              <div class="w-5/6 sm:w-1/2 p-6">
+                <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3"></h3>
+                <p class="text-gray-600 mb-8">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus a reiciendis quod, molestias sint deleniti possimus aliquam animi eaque esse optio iste consequatur porro assumenda.
+                  </p>
+
+              </div>
+              <div class="w-full sm:w-1/2 p-6">
+                <img class="w-72 md:4/5 z-50" src="<?php echo get_template_directory_uri(); ?>/assets/img/hero.png">
+                  </div>
+              </div>
+
+        <div class="flex flex-wrap flex-col-reverse sm:flex-row">
+                <div class="w-full sm:w-1/2 p-6 mt-6">
+                  <img class="w-72 md:4/5 z-50" src="<?php echo get_template_directory_uri(); ?>/assets/img/hero.png">
+                
+                </div>
+            
+                <div class="w-full sm:w-1/2 p-6 mt-6">
+                        <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3"></h3>
+                        <p class="text-gray-600 mb-8">
+                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus a reiciendis quod, molestias sint deleniti possimus aliquam animi eaque esse optio iste consequatur porro assumenda.
+                        </p>
+
+                          
+                </div>
+        
+
+
+
+        </div>
+
+      </div>
+    </div>
+
+</section>
 <?php get_footer();?>

@@ -76,7 +76,7 @@
 
         <!-------Mobile menue start----->
 
-        <div class="md:hidden flex justify-center mt-3 w-full">
+        <div class="md:hidden flex justify-center mt-3 w-full text-black">
             <div id="mobile-menu" class="mobile-menu absolute top-23 w-full">
               
                 <?php
