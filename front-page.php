@@ -5,12 +5,13 @@
     <div class="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <!---Left----->
         <div  class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-            <p class="uppercase w-full text-3xl "> Youtube Efe Görkem</p>
-            <h1>Lorem ipsum dolor sit amet.</h1>
-            <p class="text-xl mb-8"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            <button class="mx-auto lg:mx-0 bg-white text-gray-700 font-bol rounded-xl shadow-lg my-6 py-4 px-8">
+            <p class="uppercase w-full text-3xl "> <?php echo get_theme_mod('slider_Title_1')?></p>
+            <h1> <?php echo get_theme_mod('slider_Title_2')?></h1>
+            <p class="text-xl mb-8">  <?php echo get_theme_mod('slider_Title_3')?> </p>
+        <a href="<?php echo get_theme_mod('button_link')?>">   
+         <button class="mx-auto lg:mx-0 bg-white text-gray-700 font-bol rounded-xl shadow-lg my-6 py-4 px-8">
                 Subscribe
-            </button>
+            </button></a>
         </div>
 
 
@@ -56,8 +57,7 @@
               <div class="w-5/6 sm:w-1/2 p-6">
                 <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3"></h3>
                 <p class="text-gray-600 mb-8">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus a reiciendis quod, molestias sint deleniti possimus aliquam animi eaque esse optio iste consequatur porro assumenda.
-                  </p>
+                <?php echo get_theme_mod('title_1_text')?>                  </p>
 
               </div>
               <div class="w-full sm:w-1/2 p-6">
@@ -74,8 +74,9 @@
                 <div class="w-full sm:w-1/2 p-6 mt-6">
                         <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3"></h3>
                         <p class="text-gray-600 mb-8">
-                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus a reiciendis quod, molestias sint deleniti possimus aliquam animi eaque esse optio iste consequatur porro assumenda.
-                        </p>
+                        <?php echo get_theme_mod('title_2_text')?>
+                      
+                      </p>
 
                           
                 </div>

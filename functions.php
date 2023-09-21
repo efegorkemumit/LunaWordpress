@@ -205,6 +205,82 @@ function luna_customize_register($wp_customize){
         ));
 
 
+    //////////////// HOMEPAGE SETTINGS
+
+    $wp_customize->add_section('home_settings', array(
+        'title'    => __('Home  Settings', 'luna'),
+        'description' => '',
+        'priority' => 10,
+    ));
+
+    $wp_customize->add_setting('title_1_text', array(
+        'default'        => '',
+        'sanitize_callback'     => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('title_1_text', array(
+        'label'    => __('Title 1 Text', 'luna'),
+        'section'  => 'home_settings',
+        'type' => 'textarea',
+    ));
+
+    $wp_customize->add_setting('title_2_text', array(
+        'default'        => '',
+        'sanitize_callback'     => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('title_2_text', array(
+        'label'    => __('Title 2 Text', 'luna'),
+        'section'  => 'home_settings',
+        'type' => 'textarea',
+    ));
+
+    $wp_customize->add_setting('slider_Title_1', array(
+        'default'        => '',
+        'sanitize_callback'     => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('slider_Title_1', array(
+        'label'    => __('slider_Title_1', 'luna'),
+        'section'  => 'home_settings',
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_setting('slider_Title_2', array(
+        'default'        => '',
+        'sanitize_callback'     => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('slider_Title_2', array(
+        'label'    => __('slider_Title_2', 'luna'),
+        'section'  => 'home_settings',
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_setting('slider_Title_3', array(
+        'default'        => '',
+        'sanitize_callback'     => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('slider_Title_3', array(
+        'label'    => __('slider_Title_3', 'luna'),
+        'section'  => 'home_settings',
+        'type' => 'text',
+    ));
+
+    $wp_customize->add_setting('button_link', array(
+        'default'        => '',
+        'sanitize_callback'     => 'esc_url_raw',
+
+    ));
+    $wp_customize->add_control('button_link', array(
+        'label'      => __('Button Link', 'luna'),
+        'section'    => 'home_settings',
+        'type'   => 'text',
+    ));
+
+   
+
 
     }
 
