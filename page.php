@@ -1,7 +1,8 @@
 <?php get_header();?>
 
+<?php the_title();?>
 
-page
+<?php the_content();?>
 
 <?php get_footer();?>
 
