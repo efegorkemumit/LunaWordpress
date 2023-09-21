@@ -125,20 +125,18 @@
 					<div class="h-full relative z-10">
 						<div x-show.immediate="testimonialActive === 1">
 							<p class="text-gray-600 serif font-normal italic px-6 py-6 md:px-16 md:py-10 text-xl md:text-2xl" x-show.transition="testimonialActive == 1">
-								Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
-							</p>
+<?php echo get_theme_mod('testimonial_1_text')?>
+            </p>
 						</div>
 						
 						<div x-show.immediate="testimonialActive === 2">
 							<p class="text-gray-600 serif font-normal italic px-6 py-6 md:px-16 md:py-10 text-xl md:text-2xl" x-show.transition="testimonialActive == 2">
-								Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
-							</p>
+              <?php echo get_theme_mod('testimonial_2_text')?>							</p>
 						</div>
 						
 						<div x-show.immediate="testimonialActive === 3"> 
 							<p class="text-gray-600 serif font-normal italic px-6 py-6 md:px-16 md:py-10 text-xl md:text-2xl" x-show.transition="testimonialActive == 3">
-								Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
-							</p>
+              <?php echo get_theme_mod('testimonial_3_text')?>							</p>
 						</div>
 					</div>
 
@@ -147,33 +145,33 @@
 							@click.prevent="testimonialActive = 1" 
 							class="text-center font-bold shadow-xs focus:outline-none focus:shadow-outline inline-block rounded-full mx-2"
 							:class="{'h-12 w-12 opacity-25 bg-indigo-300 text-gray-600': testimonialActive != 1, 'h-16 w-16 opacity-100 bg-indigo-600 text-white': testimonialActive == 1 }"	
-						>JD</button>
+						><?php echo get_theme_mod('testimonial_1_ab')?></button>
 						<button 
 							@click.prevent="testimonialActive = 2" 
 							class="text-center font-bold shadow-xs focus:outline-none focus:shadow-outline h-16 w-16 inline-block bg-indigo-600 rounded-full mx-2"
 							:class="{'h-12 w-12 opacity-25 bg-indigo-300 text-gray-600': testimonialActive != 2, 'h-16 w-16 opacity-100 bg-indigo-600 text-white': testimonialActive == 2 }"	
-						>WD</button>
+						><?php echo get_theme_mod('testimonial_2_ab')?></button>
 						<button 
 							@click.prevent="testimonialActive = 3" 
 							class="text-center font-bold shadow-xs focus:outline-none focus:shadow-outline h-12 w-12 inline-block bg-indigo-600 rounded-full mx-2"
 							:class="{'h-12 w-12 opacity-25 bg-indigo-300 text-gray-600': testimonialActive != 3, 'h-16 w-16 opacity-100 bg-indigo-600 text-white': testimonialActive == 3 }"
-						>JW</button>
+						><?php echo get_theme_mod('testimonial_3_ab')?></button>
 					</div>
 					 
 					<div class="flex justify-center px-6 pt-2 pb-6 md:py-6">
 						<div class="text-center" x-show="testimonialActive == 1">
-							<h2 class="text-sm md:text-base font-bold text-gray-700 leading-tight">John Doe</h2>
-							<small class="text-gray-500 text-xs md:text-sm truncate">CEO, ABC Inc.</small>
+							<h2 class="text-sm md:text-base font-bold text-gray-700 leading-tight"><?php echo get_theme_mod('testimonial_1_name')?></h2>
+							<small class="text-gray-500 text-xs md:text-sm truncate"><?php echo get_theme_mod('testimonial_1_city')?>.</small>
 						</div>
 
 						<div class="text-center" x-show="testimonialActive == 2">
-							<h2 class="text-sm md:text-base font-bold text-gray-700 leading-tight">Winter Doe</h2>
-							<small class="text-gray-500 text-xs md:text-sm truncate">CTO, XYZ Corp.</small>
+							<h2 class="text-sm md:text-base font-bold text-gray-700 leading-tight"><?php echo get_theme_mod('testimonial_2_name')?></h2>
+							<small class="text-gray-500 text-xs md:text-sm truncate"><?php echo get_theme_mod('testimonial_2_city')?>.</small>
 						</div>
 
 						<div class="text-center" x-show="testimonialActive == 3">
-							<h2 class="text-sm md:text-base font-bold text-gray-700 leading-tight">John Wick</h2>
-							<small class="text-gray-500 text-xs md:text-sm truncate">Product Manager, Fake Corp.</small>
+							<h2 class="text-sm md:text-base font-bold text-gray-700 leading-tight"><?php echo get_theme_mod('testimonial_3_name')?></h2>
+							<small class="text-gray-500 text-xs md:text-sm truncate"><?php echo get_theme_mod('testimonial_3_city')?>.</small>
 						</div>	 
 					</div>
 				</div>

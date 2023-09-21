@@ -149,7 +149,64 @@ function luna_customize_register($wp_customize){
         'settings' => 'footer_custom_logo',
     )));
 
+     //////////////// TESTIMONIAL SETTINGS
 
+     $wp_customize->add_section('testimonial_settings', array(
+        'title'    => __('Testimonial  Settings', 'luna'),
+        'description' => '',
+        'priority' => 60,
+    ));
+
+    for($i=1; $i<=3; $i++)
+    {
+        $wp_customize->add_setting('testimonial_'.$i. '_text', array(
+            'default'        => '',
+            'sanitize_callback'     => 'sanitize_text_field',
+        ));
+
+        $wp_customize->add_control('testimonial_'.$i. '_text', array(
+            'label'    => __('Testimonial_'.$i. ' Text', 'luna'),
+            'section'  => 'testimonial_settings',
+            'type' => 'textarea',
+        ));
+
+
+        $wp_customize->add_setting('testimonial_'.$i. '_name', array(
+            'default'        => '',
+            'sanitize_callback'     => 'sanitize_text_field',
+        ));
+
+        $wp_customize->add_control('testimonial_'.$i. '_name', array(
+            'label'    => __('Testimonial_'.$i. ' Name', 'luna'),
+            'section'  => 'testimonial_settings',
+            'type' => 'text',
+        ));
+
+        $wp_customize->add_setting('testimonial_'.$i. '_city', array(
+            'default'        => '',
+            'sanitize_callback'     => 'sanitize_text_field',
+        ));
+
+        $wp_customize->add_control('testimonial_'.$i. '_city', array(
+            'label'    => __('Testimonial_'.$i. ' City', 'luna'),
+            'section'  => 'testimonial_settings',
+            'type' => 'text',
+        ));
+
+        $wp_customize->add_setting('testimonial_'.$i. '_ab', array(
+            'default'        => '',
+            'sanitize_callback'     => 'sanitize_text_field',
+        ));
+
+        $wp_customize->add_control('testimonial_'.$i. '_ab', array(
+            'label'    => __('Testimonial_'.$i. ' ab', 'luna'),
+            'section'  => 'testimonial_settings',
+            'type' => 'text',
+        ));
+
+
+
+    }
 
 }
 add_action('customize_register', 'luna_customize_register');
