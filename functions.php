@@ -308,5 +308,14 @@ function luna_widgets_init() {
 		'before_title'	=> '',
 		'after_title'	=> '',
     ) );
+    register_sidebar( array(
+		'name'          => __( 'Main Sidebar', 'luna' ),
+		'id'            => 'sidebar-1',
+		'description'   => __( 'Widgets in this area will be shown under your single posts, before comments.', 'luna' ),
+		'before_widget'	=> '<div class="single-sidebar">',
+		'after_widget'	=> '</div>',
+		'before_title'	=> '',
+		'after_title'	=> '',
+    ) );
 }
 add_action( 'widgets_init', 'luna_widgets_init' );
