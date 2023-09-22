@@ -43,7 +43,7 @@
                 <img class="w-full  h-60 object-cover object-center" src="<?php the_post_thumbnail_url() ;?>"/>
                 <div class="p-6">
                     <h4 class="text-xl font-semibold text-gray-950"><a  class="text-gray-950" href="<?php the_permalink() ?>"> <?php the_title() ?> </a> </h4>
-                    <div class="mt-2 text-sm text-gray-600"><i class="fa-solid fa-clock"></i> <?php the_date('Y/m/d') ?> </div>
+                    <div class="mt-2 text-sm text-gray-600"><i class="fa-solid fa-clock"></i> <?php echo get_the_date(); ?>  </div>
                     <div class="mt-2 text-gray-600"><?php the_excerpt() ?> </div>
                     <div class="mt-2 text-sm text-gray-600">
                         <a href="<?php the_permalink() ?>">
