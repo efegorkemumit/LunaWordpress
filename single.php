@@ -38,6 +38,16 @@
                 <?php endwhile; ?>
 
               </div>
+
+
+              <div class="bg-white py-8 px-4 rounded-xl shadow-lg">
+                <h2 class="text-2xl text-black">Comments</h2>
+              <?php  
+              if(comments_open()){
+                comments_template();
+              }
+              ?>
+              </div>
         </div>
         <div class="col-span-4"> 
             <aside>
