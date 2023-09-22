@@ -1,6 +1,8 @@
 <?php
 
 function luna_setup(){
+    add_theme_support('post-thumbnails');
+
 
     register_nav_menus(array(
         'primary_menu' => __( 'Primary Menu', 'luna' ),

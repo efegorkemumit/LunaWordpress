@@ -22,7 +22,7 @@
     <section>
     <div class ="bg-white border-b py-8">
       <div class="container max-w-5xl mx-auto m-8">
-        <h1 class="w-full my-7 text-5xl font-semibold text-center text-gray-800">  Blog</h1>
+        <h1 class="w-full my-7 text-5xl font-semibold text-center text-gray-800"><?php single_cat_title() ?></h1>
         <div class="w-full mb-4">
           <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-2xl"> </div>
         </div>
@@ -37,16 +37,16 @@
     <div class="container max-w-5xl mx-auto m-8">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-
+<?php while(have_posts()) :the_post(); ?>
         <div class="p-4">
             <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img class="w-30 h-11" src="<?php echo get_template_directory_uri() ;?>/assets/img/logo.png"/>
+                <img class="w-full  h-60 object-cover object-center" src="<?php the_post_thumbnail_url() ;?>"/>
                 <div class="p-6">
-                    <h4 class="text-xl font-semibold text-gray-950"><a  class="text-gray-950" href="#"> Blog </a> </h4>
-                    <div class="mt-2 text-sm text-gray-600"><i class="fa-solid fa-clock"></i> 4/9/2023 </div>
-                    <div class="mt-2 text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quisquam esse totam. Recusandae, asperiores delectus! </div>
+                    <h4 class="text-xl font-semibold text-gray-950"><a  class="text-gray-950" href="<?php the_permalink() ?>"> <?php the_title() ?> </a> </h4>
+                    <div class="mt-2 text-sm text-gray-600"><i class="fa-solid fa-clock"></i> <?php the_date('Y/m/d') ?> </div>
+                    <div class="mt-2 text-gray-600"><?php the_excerpt() ?> </div>
                     <div class="mt-2 text-sm text-gray-600">
-                        <a href="#">
+                        <a href="<?php the_permalink() ?>">
                         <i class="fa-solid fa-angle-right"></i> Read More... 
                         </a>
                     </div>
@@ -54,6 +54,7 @@
 
             </div>
         </div>
+        <?php endwhile; ?>
 
 
 
