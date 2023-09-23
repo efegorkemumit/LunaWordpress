@@ -312,7 +312,7 @@ function luna_widgets_init() {
 		'name'          => __( 'Main Sidebar', 'luna' ),
 		'id'            => 'sidebar-1',
 		'description'   => __( 'Widgets in this area will be shown under your single posts, before comments.', 'luna' ),
-		'before_widget'	=> '<div class="single-sidebar">',
+		'before_widget'	=> '<div class="single-sidebar mt-10">',
 		'after_widget'	=> '</div>',
 		'before_title'	=> '',
 		'after_title'	=> '',

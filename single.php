@@ -50,7 +50,7 @@
               </div>
         </div>
         <div class="col-span-4"> 
-            <aside>
+            <aside class="bg-white shadow-xl">
                 <?php if(is_active_sidebar('sidebar-1')) : ?>
                     <ul class="text-black">
                         <?php dynamic_sidebar('sidebar-1') ?>
@@ -66,6 +66,32 @@
 </div>
 </section> 
 
+<style>
+.wp-block-search__button {
+    /* margin-left: 10px; */
+    word-break: normal;
+    margin: 0;
+    background-color: darksalmon !important;
+    border: 1px solid #000;
+    color: white;
+    padding: 4px;
+}
+.wp-block-heading
+{
+  font-weight:bold;
+  margin-left:20px;
+}
+.wp-block-latest-posts.wp-block-latest-posts__list li {
+    clear: both;
+    list-style: circle;
+    margin-left: 42px;
+}
+.wp-block-latest-comments__comment {
+    list-style: none;
+    margin-bottom: 1em;
+    margin-left: 36px !important;
+}
 
+  </style>
 <?php get_footer();?>
 
